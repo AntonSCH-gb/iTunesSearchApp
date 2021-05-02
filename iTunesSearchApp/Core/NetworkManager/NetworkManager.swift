@@ -10,15 +10,16 @@ import Alamofire
 
 final class NetworkManager {
     
-    typealias DataCompletion = (Data) -> Void
-    typealias JSONCompletion = ([String: Any]?) -> Void
+    typealias DataCompletion = (Result<Data, AFError>) -> Void
+    typealias JSONCompletion = (Result<[String: Any]?, AFError>) -> Void
     
     func dataRequest (_ request: WebRequest, then completion: DataCompletion?) {
-        AF.request(request.url, method: request.method, parameters: request.parameters).validate().responseData { [weak self] response in
+            AF.request(request.url, method: request.method, parameters: request.parameters).validate().responseData { [weak self] response in
+                
             switch response.result {
             
             case let .success(data):
-                completion?(data)
+                completion?(.success(data))
                 
             case let .failure(error):
                 self?.logError(error, request: request)
@@ -32,7 +33,7 @@ final class NetworkManager {
             switch response.result {
             
             case let .success(json):
-                completion?(json as? [String: Any])
+                completion?(.success(json as? [String: Any]))
                 
             case let .failure(error):
                 self?.logError(error, request: request)
@@ -40,7 +41,6 @@ final class NetworkManager {
             }
         }
     }
-    
     
 
     private func logError(_ error: Error, request: WebRequest) {
