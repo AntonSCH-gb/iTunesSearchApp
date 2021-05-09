@@ -8,13 +8,13 @@
 import UIKit
 import Alamofire
 
-protocol SearchViewInput: class {
+protocol SearchViewInput: AnyObject {
     
     var searchResults: [ITunesApp] { get set }
     func showError(error: Error)
     func hideNoResults()
     func showNoResults()
-    func throbber(show: Bool)
+    func searchBarThrobber(show: Bool)
 }
 
 protocol SearchViewOutput {
@@ -34,7 +34,7 @@ class SearchPresenter {
         self.searchService.getApps(forQuery: query) { [weak self] result in
             guard let self = self else { return }
             
-            self.viewInput?.throbber(show: false)
+            self.viewInput?.searchBarThrobber(show: false)
             
             switch result {
             
@@ -51,20 +51,20 @@ class SearchPresenter {
         }
     }
     
-//    private func openAppDetail(with app: ITunesApp) {
-//        let appDetaillViewController = AppDetailViewController(app: app)
-//        viewInput?.navigationController?.pushViewController(appDetaillViewController, animated: true)
-//    }
+    private func openAppDetail(with app: ITunesApp) {
+        let appDetaillViewController = AppDetailViewController(app: app)
+        viewInput?.navigationController?.pushViewController(appDetaillViewController, animated: true)
+    }
 }
 
 extension SearchPresenter: SearchViewOutput {
     
     func viewDidSearch(with query: String) {
-        self.viewInput?.throbber(show: true)
+        self.viewInput?.searchBarThrobber(show: true)
         requestApps(with: query)
     }
     
     func viewDidSelectApp(_ app: ITunesApp) {
-//        openAppDetail(with: app)
+        openAppDetail(with: app)
     }
 }

@@ -48,7 +48,6 @@ final class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.searchView.searchBar.delegate = self
         self.searchView.tableView.register(AppCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
         self.searchView.tableView.delegate = self
@@ -57,13 +56,13 @@ final class SearchViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.throbber(show: false)
+        self.searchBarThrobber(show: false)
     }
     
     // MARK: - Private
     
-    func throbber(show: Bool) {
-//        UIApplication.shared.isNetworkActivityIndicatorVisible = show
+    func searchBarThrobber(show: Bool) {
+        searchView.searchBar.isLoading = show
     }
     
     func showError(error: Error) {

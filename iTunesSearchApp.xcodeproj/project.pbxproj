@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B3AF0FF5E38505DB29E0D153 /* Pods_iTunesSearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DDA434D4C18AD284411819 /* Pods_iTunesSearchApp.framework */; };
+		EE6403652645844A00866ED6 /* AppScreenShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */; };
+		EE6403672645846100866ED6 /* AppScreenShotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403662645846100866ED6 /* AppScreenShotsView.swift */; };
 		EE8C90F3263A167F00EF20D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90F2263A167F00EF20D9 /* AppDelegate.swift */; };
 		EE8C90F5263A167F00EF20D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90F4263A167F00EF20D9 /* SceneDelegate.swift */; };
-		EE8C90FC263A168100EF20D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90FB263A168100EF20D9 /* Assets.xcassets */; };
 		EE8C90FF263A168100EF20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90FD263A168100EF20D9 /* LaunchScreen.storyboard */; };
 		EE8C910C263A246800EF20D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C910B263A246800EF20D9 /* NetworkManager.swift */; };
 		EE8C9110263A277200EF20D9 /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C910F263A277200EF20D9 /* WebRequest.swift */; };
@@ -29,16 +30,24 @@
 		EE8C914C263F030D00EF20D9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C914B263F030D00EF20D9 /* SearchViewController.swift */; };
 		EE8C9151263F08CE00EF20D9 /* AppCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9150263F08CE00EF20D9 /* AppCellModel.swift */; };
 		EE8C915A263F114100EF20D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8C9159263F114100EF20D9 /* Main.storyboard */; };
+		EE8C9169263F427400EF20D9 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9168263F427400EF20D9 /* AppDetailHeaderViewController.swift */; };
+		EE8C916C263F42C700EF20D9 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C916B263F42C700EF20D9 /* AppDetailViewController.swift */; };
+		EE8C916F263F433200EF20D9 /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C916E263F433200EF20D9 /* AppDetailHeaderView.swift */; };
+		EE8C9172263F43ED00EF20D9 /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9171263F43ED00EF20D9 /* AppDetailView.swift */; };
+		EE8C917D2642136500EF20D9 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C917C2642136400EF20D9 /* UISearchBarExtensions.swift */; };
+		EE8C91812642425600EF20D9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C91802642425600EF20D9 /* UIImageExtension.swift */; };
+		EE8C91842642471300EF20D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8C91832642471300EF20D9 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		828A19A3AB77CC8EF9FCC881 /* Pods-iTunesSearchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchApp.release.xcconfig"; path = "Target Support Files/Pods-iTunesSearchApp/Pods-iTunesSearchApp.release.xcconfig"; sourceTree = "<group>"; };
 		86E6813E51A9EC11C0C698D2 /* Pods-iTunesSearchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchApp.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchApp/Pods-iTunesSearchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A7DDA434D4C18AD284411819 /* Pods_iTunesSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenShotsViewController.swift; sourceTree = "<group>"; };
+		EE6403662645846100866ED6 /* AppScreenShotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenShotsView.swift; sourceTree = "<group>"; };
 		EE8C90EF263A167F00EF20D9 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C90F2263A167F00EF20D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8C90F4263A167F00EF20D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE8C90FB263A168100EF20D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE8C90FE263A168100EF20D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8C9100263A168100EF20D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C910B263A246800EF20D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -58,6 +67,13 @@
 		EE8C914B263F030D00EF20D9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EE8C9150263F08CE00EF20D9 /* AppCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellModel.swift; sourceTree = "<group>"; };
 		EE8C9159263F114100EF20D9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EE8C9168263F427400EF20D9 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
+		EE8C916B263F42C700EF20D9 /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		EE8C916E263F433200EF20D9 /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
+		EE8C9171263F43ED00EF20D9 /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		EE8C917C2642136400EF20D9 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
+		EE8C91802642425600EF20D9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		EE8C91832642471300EF20D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				EE8C912B263B8D4C00EF20D9 /* UIColorExtensions.swift */,
+				EE8C917C2642136400EF20D9 /* UISearchBarExtensions.swift */,
+				EE8C91802642425600EF20D9 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +229,7 @@
 		EE8C9137263EE7C600EF20D9 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				EE8C9160263F419600EF20D9 /* AppDetail */,
 				EE8C9138263EE7D200EF20D9 /* Search */,
 			);
 			path = Flows;
@@ -264,9 +283,9 @@
 		EE8C915C263F11FD00EF20D9 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				EE8C90FB263A168100EF20D9 /* Assets.xcassets */,
 				EE8C90FD263A168100EF20D9 /* LaunchScreen.storyboard */,
 				EE8C9159263F114100EF20D9 /* Main.storyboard */,
+				EE8C91832642471300EF20D9 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -278,6 +297,35 @@
 				EE8C90F4263A167F00EF20D9 /* SceneDelegate.swift */,
 			);
 			path = AppAndScerneDelegates;
+			sourceTree = "<group>";
+		};
+		EE8C9160263F419600EF20D9 /* AppDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EE8C9162263F41BF00EF20D9 /* Controller */,
+				EE8C9161263F41B400EF20D9 /* View */,
+			);
+			path = AppDetail;
+			sourceTree = "<group>";
+		};
+		EE8C9161263F41B400EF20D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE8C916E263F433200EF20D9 /* AppDetailHeaderView.swift */,
+				EE8C9171263F43ED00EF20D9 /* AppDetailView.swift */,
+				EE6403662645846100866ED6 /* AppScreenShotsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE8C9162263F41BF00EF20D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE8C9168263F427400EF20D9 /* AppDetailHeaderViewController.swift */,
+				EE8C916B263F42C700EF20D9 /* AppDetailViewController.swift */,
+				EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,8 +388,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8C915A263F114100EF20D9 /* Main.storyboard in Resources */,
+				EE8C91842642471300EF20D9 /* Assets.xcassets in Resources */,
 				EE8C90FF263A168100EF20D9 /* LaunchScreen.storyboard in Resources */,
-				EE8C90FC263A168100EF20D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,11 +447,17 @@
 				EE8C9140263EE8B400EF20D9 /* SearchPresenter.swift in Sources */,
 				EE8C911E263B881D00EF20D9 /* ITunesSong.swift in Sources */,
 				EE8C913B263EE7FD00EF20D9 /* SearchBuilder.swift in Sources */,
+				EE8C9169263F427400EF20D9 /* AppDetailHeaderViewController.swift in Sources */,
+				EE8C916F263F433200EF20D9 /* AppDetailHeaderView.swift in Sources */,
 				EE8C9151263F08CE00EF20D9 /* AppCellModel.swift in Sources */,
 				EE8C911B263B768C00EF20D9 /* Monads.swift in Sources */,
 				EE8C90F3263A167F00EF20D9 /* AppDelegate.swift in Sources */,
+				EE6403672645846100866ED6 /* AppScreenShotsView.swift in Sources */,
+				EE6403652645844A00866ED6 /* AppScreenShotsViewController.swift in Sources */,
 				EE8C9149263F018100EF20D9 /* AppCell.swift in Sources */,
 				EE8C9135263B96C000EF20D9 /* iTunesSearchResult.swift in Sources */,
+				EE8C916C263F42C700EF20D9 /* AppDetailViewController.swift in Sources */,
+				EE8C917D2642136500EF20D9 /* UISearchBarExtensions.swift in Sources */,
 				EE8C912C263B8D4C00EF20D9 /* UIColorExtensions.swift in Sources */,
 				EE8C9132263B967D00EF20D9 /* iTunesSearchService.swift in Sources */,
 				EE8C914C263F030D00EF20D9 /* SearchViewController.swift in Sources */,
@@ -412,6 +466,8 @@
 				EE8C9122263B88FA00EF20D9 /* ImageDownloader.swift in Sources */,
 				EE8C9127263B8C7A00EF20D9 /* AppStartManager.swift in Sources */,
 				EE8C9115263A3C6400EF20D9 /* ITunesApp.swift in Sources */,
+				EE8C9172263F43ED00EF20D9 /* AppDetailView.swift in Sources */,
+				EE8C91812642425600EF20D9 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

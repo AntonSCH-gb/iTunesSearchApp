@@ -39,6 +39,7 @@ final class SearchView: UIView {
     }
     
     private func addSearchBar() {
+        self.searchBar.enablesReturnKeyAutomatically = false
         self.searchBar.translatesAutoresizingMaskIntoConstraints = false
         self.searchBar.searchBarStyle = .minimal
         self.addSubview(self.searchBar)
@@ -49,7 +50,6 @@ final class SearchView: UIView {
         self.tableView.separatorInset = UIEdgeInsets(top: 0.0, left: 12.0, bottom: 0.0, right: 0.0)
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.isHidden = true
-        self.tableView.tableFooterView = UIView()
         self.addSubview(self.tableView)
     }
     

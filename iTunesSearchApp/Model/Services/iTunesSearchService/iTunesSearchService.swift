@@ -31,7 +31,7 @@ final class ITunesSearchService {
         static let mediaType = "media"
     }
     
-    public func getApps(forQuery query: String, then completion: CompletionApps?) {
+    func getApps(forQuery query: String, then completion: CompletionApps?) {
         let regionCode = Locale.current.regionCode ?? defaultRegionCode
         var parameters: Parameters = [:]
         parameters[Parameter.query] = query
@@ -61,7 +61,7 @@ final class ITunesSearchService {
         }
     }
     
-    public func getSongs(forQuery query: String, completion: CompletionSongs?) {
+    func getSongs(forQuery query: String, completion: CompletionSongs?) {
         let regionCode = Locale.current.regionCode ?? defaultRegionCode
         var parameters: Parameters = [:]
         parameters[Parameter.query] = query

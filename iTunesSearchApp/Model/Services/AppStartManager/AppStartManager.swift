@@ -28,9 +28,9 @@ final class AppStartManager {
     
     private lazy var configuredNavigationController: UINavigationController = {
         let navVC = UINavigationController()
+        navVC.navigationBar.backgroundColor = UIColor.varna
         navVC.navigationBar.barTintColor = UIColor.varna
         navVC.navigationBar.isTranslucent = false
-        navVC.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         return navVC
     }()

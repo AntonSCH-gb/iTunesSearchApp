@@ -16,8 +16,11 @@ struct AppCellModel {
 final class AppCellModelFactory {
     
     static func cellModel(from model: ITunesApp) -> AppCellModel {
+        let ratingText = model.averageRating != nil ?
+            "Rating: \((model.averageRating! * 10).rounded()/10)" :
+            "Is no rating"
         return AppCellModel(title: model.appName,
                             subtitle: model.company,
-                            rating: model.averageRating >>- { "\($0)" })
+                            rating: ratingText)
     }
 }
