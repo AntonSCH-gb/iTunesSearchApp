@@ -61,6 +61,17 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Private
     
+    
+    
+    private func requestApps(with query: String) {
+        presenter.viewDidSearch(with: query)
+        self.searchResults = []
+        self.searchView.tableView.reloadData()
+    }
+}
+
+extension SearchViewController: SearchViewInput {
+    
     func searchBarThrobber(show: Bool) {
         searchView.searchBar.isLoading = show
     }
@@ -80,16 +91,6 @@ final class SearchViewController: UIViewController {
     func hideNoResults() {
         self.searchView.emptyResultView.isHidden = true
     }
-    
-    private func requestApps(with query: String) {
-        presenter.viewDidSearch(with: query)
-        self.searchResults = []
-        self.searchView.tableView.reloadData()
-    }
-}
-
-extension SearchViewController: SearchViewInput {
-    
 }
 
 //MARK: - UITableViewDataSource

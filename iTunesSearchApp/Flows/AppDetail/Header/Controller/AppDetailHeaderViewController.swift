@@ -11,8 +11,6 @@ class AppDetailHeaderViewController: UIViewController {
     
     private let app: ITunesApp
     
-    private let imageDownloader = ImageDownloader()
-    
     private var appDetailHeaderView: AppDetailHeaderView {
         return self.view as! AppDetailHeaderView
     }
@@ -32,12 +30,15 @@ class AppDetailHeaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         congureUI()
     }
     
+    func setIcon(image: UIImage){
+        appDetailHeaderView.imageView.image = image
+    }
+    
     private func congureUI() {
-        downloadImage()
+
         appDetailHeaderView.titleLabel.text = app.appName
         appDetailHeaderView.subtitleLabel.text = app.company
         
@@ -51,12 +52,14 @@ class AppDetailHeaderViewController: UIViewController {
     }
     
     private func fillRatingStars(_ rating: Double?) {
+        
         guard let view = self.view as? AppDetailHeaderView,
               let rating = rating,
               let stars = view.starsView.subviews as? [UIImageView]
         else { return }
         
         var i = ((rating * 10).rounded())/10
+        
         for star in stars {
             switch i {
             case 1...5:
@@ -67,18 +70,6 @@ class AppDetailHeaderViewController: UIViewController {
                 i -= 1
             default:
                 break
-            }
-        }
-    }
-    
-    private func downloadImage() {
-        guard let url = self.app.iconUrl else { return }
-        
-        self.imageDownloader.getImage(fromUrl: url) { [weak self] (image, error) in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                self.appDetailHeaderView.imageView.image = image
             }
         }
     }

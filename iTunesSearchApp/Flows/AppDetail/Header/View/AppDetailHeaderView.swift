@@ -128,9 +128,5 @@ class AppDetailHeaderView: UIView {
             starsView.widthAnchor.constraint(equalToConstant: 130)
             
         ])
-
-
-
-
     }
 }

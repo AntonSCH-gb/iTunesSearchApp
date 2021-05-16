@@ -52,7 +52,9 @@ class SearchPresenter {
     }
     
     private func openAppDetail(with app: ITunesApp) {
-        let appDetaillViewController = AppDetailViewController(app: app)
+        let appDetaillViewController = AppDetailBuilder.build(with: app)
+        
+//        let appDetaillViewController = AppDetailViewController(app: app)
         viewInput?.navigationController?.pushViewController(appDetaillViewController, animated: true)
     }
 }

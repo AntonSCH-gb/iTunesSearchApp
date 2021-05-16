@@ -44,7 +44,7 @@ struct ITunesApp: Codable {
         self.appDescription = try? container.decode(String.self, forKey: .appDescription)
         self.averageRating = try? container.decode(Double.self, forKey: .averageRating)
         self.averageRatingForCurrentVersion = try? container.decode(Double.self, forKey: .averageRatingForCurrentVersion)
-        self.size = (try? container.decode(String.self, forKey: .size)) >>- { Bytes($0) }
+        self.size = Bytes((try? container.decode(String.self, forKey: .size)) ?? "0")
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
     }

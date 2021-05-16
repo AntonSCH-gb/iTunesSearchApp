@@ -10,13 +10,15 @@
 		B3AF0FF5E38505DB29E0D153 /* Pods_iTunesSearchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DDA434D4C18AD284411819 /* Pods_iTunesSearchApp.framework */; };
 		EE6403652645844A00866ED6 /* AppScreenShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */; };
 		EE6403672645846100866ED6 /* AppScreenShotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403662645846100866ED6 /* AppScreenShotsView.swift */; };
+		EE6403A9264ACDCA00866ED6 /* ScreenShotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403A8264ACDCA00866ED6 /* ScreenShotViewCell.swift */; };
+		EE6403AF264CA88900866ED6 /* AppDatailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403AE264CA88900866ED6 /* AppDatailPresenter.swift */; };
+		EE6403B1264CA90B00866ED6 /* AppDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6403B0264CA90B00866ED6 /* AppDetailBuilder.swift */; };
 		EE8C90F3263A167F00EF20D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90F2263A167F00EF20D9 /* AppDelegate.swift */; };
 		EE8C90F5263A167F00EF20D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90F4263A167F00EF20D9 /* SceneDelegate.swift */; };
 		EE8C90FF263A168100EF20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8C90FD263A168100EF20D9 /* LaunchScreen.storyboard */; };
 		EE8C910C263A246800EF20D9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C910B263A246800EF20D9 /* NetworkManager.swift */; };
 		EE8C9110263A277200EF20D9 /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C910F263A277200EF20D9 /* WebRequest.swift */; };
 		EE8C9115263A3C6400EF20D9 /* ITunesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9114263A3C6400EF20D9 /* ITunesApp.swift */; };
-		EE8C911B263B768C00EF20D9 /* Monads.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C911A263B768C00EF20D9 /* Monads.swift */; };
 		EE8C911E263B881D00EF20D9 /* ITunesSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C911D263B881D00EF20D9 /* ITunesSong.swift */; };
 		EE8C9122263B88FA00EF20D9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9121263B88FA00EF20D9 /* ImageDownloader.swift */; };
 		EE8C9127263B8C7A00EF20D9 /* AppStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C9126263B8C7A00EF20D9 /* AppStartManager.swift */; };
@@ -45,6 +47,9 @@
 		A7DDA434D4C18AD284411819 /* Pods_iTunesSearchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenShotsViewController.swift; sourceTree = "<group>"; };
 		EE6403662645846100866ED6 /* AppScreenShotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenShotsView.swift; sourceTree = "<group>"; };
+		EE6403A8264ACDCA00866ED6 /* ScreenShotViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotViewCell.swift; sourceTree = "<group>"; };
+		EE6403AE264CA88900866ED6 /* AppDatailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatailPresenter.swift; sourceTree = "<group>"; };
+		EE6403B0264CA90B00866ED6 /* AppDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailBuilder.swift; sourceTree = "<group>"; };
 		EE8C90EF263A167F00EF20D9 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C90F2263A167F00EF20D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8C90F4263A167F00EF20D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		EE8C910B263A246800EF20D9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EE8C910F263A277200EF20D9 /* WebRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequest.swift; sourceTree = "<group>"; };
 		EE8C9114263A3C6400EF20D9 /* ITunesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesApp.swift; sourceTree = "<group>"; };
-		EE8C911A263B768C00EF20D9 /* Monads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monads.swift; sourceTree = "<group>"; };
 		EE8C911D263B881D00EF20D9 /* ITunesSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSong.swift; sourceTree = "<group>"; };
 		EE8C9121263B88FA00EF20D9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		EE8C9126263B8C7A00EF20D9 /* AppStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartManager.swift; sourceTree = "<group>"; };
@@ -103,6 +107,41 @@
 				828A19A3AB77CC8EF9FCC881 /* Pods-iTunesSearchApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE6403A6264ACD0A00866ED6 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				EE6403AA264ADBCD00866ED6 /* Controller */,
+				EE6403A7264ACD3100866ED6 /* View */,
+			);
+			path = ScreenShots;
+			sourceTree = "<group>";
+		};
+		EE6403A7264ACD3100866ED6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE6403662645846100866ED6 /* AppScreenShotsView.swift */,
+				EE6403A8264ACDCA00866ED6 /* ScreenShotViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE6403AA264ADBCD00866ED6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE6403AD264CA73400866ED6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EE8C9161263F41B400EF20D9 /* View */,
+				EE8C9162263F41BF00EF20D9 /* Controller */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		EE8C90E6263A167F00EF20D9 = {
@@ -167,18 +206,9 @@
 			children = (
 				EE8C915D263F123200EF20D9 /* AppAndScerneDelegates */,
 				EE8C912A263B8D1600EF20D9 /* Extensions */,
-				EE8C9119263B767200EF20D9 /* Monads */,
 				EE8C910A263A243800EF20D9 /* NetworkManager */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		EE8C9119263B767200EF20D9 /* Monads */ = {
-			isa = PBXGroup;
-			children = (
-				EE8C911A263B768C00EF20D9 /* Monads.swift */,
-			);
-			path = Monads;
 			sourceTree = "<group>";
 		};
 		EE8C9120263B88D800EF20D9 /* ImageDownloader */ = {
@@ -302,8 +332,11 @@
 		EE8C9160263F419600EF20D9 /* AppDetail */ = {
 			isa = PBXGroup;
 			children = (
-				EE8C9162263F41BF00EF20D9 /* Controller */,
-				EE8C9161263F41B400EF20D9 /* View */,
+				EE8C916B263F42C700EF20D9 /* AppDetailViewController.swift */,
+				EE6403AE264CA88900866ED6 /* AppDatailPresenter.swift */,
+				EE6403B0264CA90B00866ED6 /* AppDetailBuilder.swift */,
+				EE6403AD264CA73400866ED6 /* Header */,
+				EE6403A6264ACD0A00866ED6 /* ScreenShots */,
 			);
 			path = AppDetail;
 			sourceTree = "<group>";
@@ -313,7 +346,6 @@
 			children = (
 				EE8C916E263F433200EF20D9 /* AppDetailHeaderView.swift */,
 				EE8C9171263F43ED00EF20D9 /* AppDetailView.swift */,
-				EE6403662645846100866ED6 /* AppScreenShotsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,8 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				EE8C9168263F427400EF20D9 /* AppDetailHeaderViewController.swift */,
-				EE8C916B263F42C700EF20D9 /* AppDetailViewController.swift */,
-				EE6403642645844A00866ED6 /* AppScreenShotsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -450,13 +480,15 @@
 				EE8C9169263F427400EF20D9 /* AppDetailHeaderViewController.swift in Sources */,
 				EE8C916F263F433200EF20D9 /* AppDetailHeaderView.swift in Sources */,
 				EE8C9151263F08CE00EF20D9 /* AppCellModel.swift in Sources */,
-				EE8C911B263B768C00EF20D9 /* Monads.swift in Sources */,
 				EE8C90F3263A167F00EF20D9 /* AppDelegate.swift in Sources */,
 				EE6403672645846100866ED6 /* AppScreenShotsView.swift in Sources */,
+				EE6403AF264CA88900866ED6 /* AppDatailPresenter.swift in Sources */,
+				EE6403B1264CA90B00866ED6 /* AppDetailBuilder.swift in Sources */,
 				EE6403652645844A00866ED6 /* AppScreenShotsViewController.swift in Sources */,
 				EE8C9149263F018100EF20D9 /* AppCell.swift in Sources */,
 				EE8C9135263B96C000EF20D9 /* iTunesSearchResult.swift in Sources */,
 				EE8C916C263F42C700EF20D9 /* AppDetailViewController.swift in Sources */,
+				EE6403A9264ACDCA00866ED6 /* ScreenShotViewCell.swift in Sources */,
 				EE8C917D2642136500EF20D9 /* UISearchBarExtensions.swift in Sources */,
 				EE8C912C263B8D4C00EF20D9 /* UIColorExtensions.swift in Sources */,
 				EE8C9132263B967D00EF20D9 /* iTunesSearchService.swift in Sources */,

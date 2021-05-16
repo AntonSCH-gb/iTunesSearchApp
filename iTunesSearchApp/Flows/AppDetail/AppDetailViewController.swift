@@ -9,15 +9,16 @@ import UIKit
 
 final class AppDetailViewController: UIViewController {
     
-    public var app: ITunesApp
+    var app: ITunesApp
     
     lazy var headerDetailViewController = AppDetailHeaderViewController(app: app)
+    lazy var appScreenShotsViewController = AppScreenShotsViewController()
     
-//    private var appDetailView: AppDetailView {
-//        return self.view as! AppDetailView
-//    }
+    let presenter: AppDetailViewOutput
+
     
-    init(app: ITunesApp) {
+    init(presenter: AppDetailViewOutput, app: ITunesApp) {
+        self.presenter = presenter
         self.app = app
         super.init(nibName: nil, bundle: nil)
     }
@@ -27,22 +28,20 @@ final class AppDetailViewController: UIViewController {
     }
     
     // MARK: - Lifecycle
-    
-//    override func loadView() {
-//        super.loadView()
-//        self.view = AppDetailView()
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
         self.configureNavigationController()
-//        self.downloadImage()
+//      
         
         addChildViewController()
+        addScreenShotsViewController()
         
-//        addDescriptionViewController()
+        presenter.getAppIcon()
+        presenter.getScreenshots()
+        appScreenShotsViewController.startLoadingImages()
     }
     
     // MARK: - Private
@@ -70,20 +69,32 @@ final class AppDetailViewController: UIViewController {
     }
     
     private func addScreenShotsViewController() {
-        // ​TODO:​ ДЗ, сделать другие сабмодули
-        let vc = UIViewController()
 
-        view.addSubview(vc.view)
-        addChild(vc)
+        view.addSubview(appScreenShotsViewController.view)
+        addChild(appScreenShotsViewController)
+        appScreenShotsViewController.didMove(toParent: self)
 
-        vc.didMove(toParent: self)
-
-        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        appScreenShotsViewController.view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            vc.view.topAnchor.constraint(equalTo: headerDetailViewController.view.bottomAnchor),
-            vc.view.leftAnchor.constraint(equalTo: view.leftAnchor),
-            vc.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            appScreenShotsViewController.view.topAnchor.constraint(equalTo: headerDetailViewController.view.bottomAnchor),
+            appScreenShotsViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            appScreenShotsViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            appScreenShotsViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+} 
+
+extension AppDetailViewController: AppDetailViewInput {
+    func showError(error: Error) {
+        
+    }
+    
+    func setIcon(image: UIImage) {
+        headerDetailViewController.setIcon(image: image)
+    }
+    
+    func setScreenshots(screenShots images: [UIImage]) {
+        appScreenShotsViewController.setScreenshots(images: images)
     }
 }
